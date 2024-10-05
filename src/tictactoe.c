@@ -61,7 +61,7 @@ char checkWinner(char board[BOARD_SIZE][BOARD_SIZE]) {
 void makeMove(char board[BOARD_SIZE][BOARD_SIZE]) {
     int xMove;
     char marker = 'X';
-    printf("\n\n Auf welches Feld willst du setzen? (1-9): ");
+    printf("\n\nAuf welches Feld willst du setzen? (1-9): ");
     scanf("%d", &xMove);
     
     // Prüfen, ob das Feld bereits belegt ist
@@ -110,7 +110,7 @@ int main() {
 
     greeter(board);
 
-    // Schleife wiederholen, bis ein Gewinner feststeht ('X' oder 'O')
+    //Programm wiederholen bis es einen Gewinner gibt
     while (winner != 'X' && winner != 'O'){
         makeMove(board);     // Spieler macht Zug
         winner = checkWinner(board);  // Überprüfe, ob es einen Gewinner gibt
